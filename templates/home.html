@@ -22,18 +22,54 @@
             <h3>My Languages</h3>
 
             <div class="skills-grid" id="skills-language">
+                {% for skill in skills %}
+                {% if skill.category == "language" %}
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="devicon-{{skill.devicon_class}}-plain colored"></i>
+                    </div>
+                    <div class="skill-text">
+                        {{ skill.name }}
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
         <div class="page-content">
             <h3>Frameworks I Know</h3>
 
             <div class="skills-grid" id="skills-framework">
+                {% for skill in skills %}
+                {% if skill.category == "framework" %}
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="devicon-{{skill.devicon_class}}-plain colored"></i>
+                    </div>
+                    <div class="skill-text">
+                        {{ skill.name }}
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
         <div class="page-content" id="skills">
             <h3>Tools I Use</h3>
 
             <div class="skills-grid" id="skills-tool">
+                {% for skill in skills %}
+                {% if skill.category == "tool" %}
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="devicon-{{skill.devicon_class}}-plain colored"></i>
+                    </div>
+                    <div class="skill-text">
+                        {{ skill.name }}
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
 

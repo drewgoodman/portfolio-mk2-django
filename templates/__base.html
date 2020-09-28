@@ -35,6 +35,11 @@
         #home {    
             background-image: url('{% static "img/background/landing.jpg" %}');
         }
+        
+        @media only screen and (max-width: 640px) {
+            #home {
+                background-image: url('{% static "img/background/landing-mobile.jpg" %}');
+            }
     </style>
 </head>
 <body>
