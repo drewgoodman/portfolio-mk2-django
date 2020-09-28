@@ -1,0 +1,165 @@
+#home {    
+    background-image: url("../static/images/background/landing.jpg");
+    background-size: cover;
+    -o-background-size:cover; 
+    -moz-background-size:cover; 
+    -webkit-background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+.home-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.home-shader {
+    background: rgba(0,0,0,0.77);
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.77) 0%, rgba(0,0,0,0) 72%, rgba(0,0,0,0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.77)), color-stop(72%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.77) 0%, rgba(0,0,0,0) 72%, rgba(0,0,0,0) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0.77) 0%, rgba(0,0,0,0) 72%, rgba(0,0,0,0) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0.77) 0%, rgba(0,0,0,0) 72%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.77) 0%, rgba(0,0,0,0) 72%, rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+}
+
+.home-intro-text {
+    color: white;
+    position: absolute;
+}
+
+.home-intro-text h1,h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+}
+
+.home-intro-text h1 {
+    font-size: 3.4em;
+    font-family: 'Special Elite', cursive;
+    border-right: 4px solid transparent;
+    animation: typing 3.5s steps(30, end),
+                blink-caret .5s .1s steps(44) 7 normal;
+}
+
+.home-intro-text h2 {
+    font-size: 2.6em;
+    color: #ddd;
+    font-family: 'Special Elite', cursive;
+    border-right: 3px solid transparent;
+    animation: typing 3.5s 3.5s steps(30, end),
+                blink-caret .5s 3.6s steps(44) infinite normal;
+    border-radius: 1px;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    width: 0%;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ddd }
+}
+
+.home-intro-text:nth-of-type(1) {
+    left: calc(500px + 5%);
+    top: 140px;
+}
+
+.home-intro-text:nth-of-type(2) {
+    left: calc(500px + 7%);
+    top: 213px;
+}
+
+.home-intro-text:nth-of-type(2):after {
+    width: 20px;
+    height: 10px;
+    border-bottom: 4px solid white;
+}
+
+
+.home-buttons {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 20px;
+    margin-right: 12%;
+    margin-bottom: 8%;
+}
+
+.home-btn {
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    width: 360px;
+    padding-right: 90px;
+    height: 30px;
+    font-size: 1.4em;
+    padding: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,.4);
+    text-decoration: none;
+    color: #fff;
+
+    -webkit-box-shadow: 9px 7px 14px -2px rgba(0,0,0,0.44);
+    -moz-box-shadow: 9px 7px 14px -2px rgba(0,0,0,0.44);
+    box-shadow: 9px 7px 14px -2px rgba(0,0,0,0.44);
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+.home-btn:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    bottom: 0;
+    width: 0;
+    left: -10%;
+    height: 120%;
+    transform: skewX(15deg);
+    background: #ccc;
+    z-index: -1;
+}
+
+.home-btn:hover:after {
+    width: 120%;
+    left: -10%;
+}
+
+.home-btn:hover {
+    color: #333;
+    z-index: 0;
+}
+
+.home-btn a {
+    margin-right: 300px;
+}
+
+
+.home-btn:nth-of-type(1) {
+    grid-column: first-s/first-e;
+    grid-row: 1/-1;   /* TODO: Eventually comment this line out once 2 buttons become necessary again.*/
+}
+
+.home-btn:nth-of-type(2) {
+    grid-column: second-s/second-e;
+}

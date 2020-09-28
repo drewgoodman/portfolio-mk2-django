@@ -1,5 +1,50 @@
 {% extends "__base.html" %}
 
 {% block content %}
-<p>This works!</p>
-{% endblock content %}
+<div class="page-container unfocus-for-lightbox">
+    <div class="page-content-wrapper">
+        <div id="home">
+            <div class="home-wrapper home-shader no-select">
+                <div class="home-intro-text">
+                    <h1>Hi there, my name's Drew.</h1>
+                </div>
+                <div class="home-intro-text">
+                    <h2>I'm a Full Stack Web Developer.</h2>
+                </div>
+                <div class="home-buttons">
+                    <a class="home-btn" href="#skills">Learn more</a>
+                    <a id="viewworks-btn" class="home-btn" href="#portfolio-personal">See projects</a>
+                    <!-- <a id="getintouch-btn" class="home-btn" href="#contact">Get in touch</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="page-content" id="skills">
+            <h3>My Languages</h3>
+
+            <div class="skills-grid" id="skills-language">
+            </div>
+        </div>
+        <div class="page-content">
+            <h3>Frameworks I Know</h3>
+
+            <div class="skills-grid" id="skills-framework">
+            </div>
+        </div>
+        <div class="page-content" id="skills">
+            <h3>Tools I Use</h3>
+
+            <div class="skills-grid" id="skills-tool">
+            </div>
+        </div>
+
+        <div class="page-content" id="portfolio-client">
+            <h3>Client Work</h3>
+            <div class="projects-wrapper" id="client-projects-container">
+            </div>
+        </div>
+        <div class="page-content" id="portfolio-personal">
+            <h3>Personal Projects</h3>
+            <div class="projects-wrapper" id="projects-container">
+            </div>
+        </div>
+        {% endblock content %}

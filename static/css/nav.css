@@ -1,0 +1,85 @@
+
+.nav-btn {
+    font-size: 2em;
+    color: white;
+    border: 5px solid #c31432;
+    background-color: #240b36;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s background-color ease-in;
+    z-index: 4;
+
+}
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 35px;
+    right: 30px;
+    display: none;
+}
+
+#scroll-to-top i {
+    margin-top: 8px;
+}
+
+#scroll-to-top:hover {
+    border: 5px solid transparent;
+    background-color:#c31432;
+}
+
+#menu-toggle {
+    position: fixed;
+    top: 35px;
+    right: 30px;
+    display: none;
+}
+
+#menu-toggle > .line {
+    position: absolute;
+    height: 3px;
+    width: 60%;
+    background: white;
+    border-radius: 9px;
+    transform: translateX(-15px);
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.40s;
+}
+
+#menu-toggle > .top {
+    top: 28%;
+}
+
+#menu-toggle > .middle {
+    top: 48%;
+}
+
+#menu-toggle > .bottom {
+    top: 68%;
+}
+
+#menu-toggle.close > .top {
+    transform: rotate(45deg) translateX(-20px);
+    top: 75%;
+}
+
+#menu-toggle.close > .middle, #menu-toggle.close > .bottom {
+    transform: rotate(-45deg) translateX(-20px);
+    top: 20%;
+}
+
+#menu-overlay {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.disable-scrolling {
+    overflow-y: hidden;
+}

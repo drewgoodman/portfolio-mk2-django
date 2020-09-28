@@ -1,0 +1,184 @@
+
+.side-bar {
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+    -webkit-box-shadow: 1px 0px 19px 0px rgba(0,0,0,0.66);
+    -moz-box-shadow: 1px 0px 19px 0px rgba(0,0,0,0.66);
+    box-shadow: 1px 0px 19px 0px rgba(0,0,0,0.66);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 420px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: [s] 2fr [profile-s] 200px [profile-e] .5fr [title-s] 160px [title-e] .5fr [links-s] 200px [links-e] 1fr [contacts-s] 80px [contacts-e] 2fr [e];
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    z-index: 3;
+}
+
+
+.profile-text {
+    text-transform: uppercase;
+    width: 300px;
+    justify-content: left;
+    /* padding-left: 30px; */
+    letter-spacing: normal;
+    
+}
+
+.profile-pic {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    grid-row: profile-s/profile-e;
+    -webkit-box-shadow: 3px 6px 9px 0px rgba(36,11,54,1);
+    -moz-box-shadow: 3px 6px 9px 0px rgba(36,11,54,1);
+    box-shadow: 3px 6px 9px 0px rgba(36,11,54,1);
+}
+
+.profile-title {
+    grid-row: title-s/title-e;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    -webkit-box-shadow: 7px 7px 5px -6px rgba(0,0,0,0.56);
+    -moz-box-shadow: 7px 7px 5px -6px rgba(0,0,0,0.56);
+    box-shadow: 7px 7px 5px -6px rgba(0,0,0,0.56);
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.profile-name {
+    font-size: 1.2em;
+}
+
+.profile-job {
+    color: #cfcfcf;
+    margin-left: 5px;
+}
+
+
+.profile-desc {
+    text-transform: none;
+    font-size: .9em;
+    font-weight: 200;
+    margin-left: 10px;
+    text-align: justify;
+    margin-top: 5px;
+}
+
+
+.profile-links {
+    grid-row: links-s/links-e;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-row-gap: 7px;
+}
+
+.profile-link {
+    text-decoration: none;
+    /* font-family: 'Special Elite', cursive; */
+    font-family: 'Share Tech Mono', monospace;
+    color: white;
+    font-size: 1.5em;
+    position: relative;
+    overflow: hidden;
+    padding-top: 10px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    -webkit-box-shadow: 7px 7px 5px -6px rgba(0,0,0,0.56);
+    -moz-box-shadow: 7px 7px 5px -6px rgba(0,0,0,0.56);
+    box-shadow: 7px 7px 5px -6px rgba(0,0,0,0.56);
+    height: 30px;
+    transition: 0.3s all ease-in;
+    text-shadow: #240b36 3px 2px 1px;
+
+}
+
+.profile-link i {
+    text-align: center;
+}
+
+.profile-links  > .profile-link:after {
+    position: absolute;
+    border-radius: 20px;
+    transition: .2s;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background: #f7f7f7;
+    width: 0%;
+    transition: 0.3s all ease-in;
+}
+
+.profile-links  > .profile-link:hover:after {
+    width: 100%;
+}
+
+.profile-links > .profile-link:focus {
+    color: #240b36;
+}
+
+.profile-contact {
+    grid-row: contacts-s/contacts-e;
+}
+
+.profile-contact > .profile-link {
+    margin-bottom: 30px;
+}
+
+.profile-contact-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    align-items: center;
+    justify-items: center;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+.profile-contact-icons > .contact-link {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.profile-contact-icons > .contact-link i {
+    font-size: 2.5em;
+    color: white;
+    transition: .3s all ease-in-out;
+}
+
+.contact-link:after {
+    position: absolute;
+    background: #240b36;
+    opacity: .9;
+    content: '';
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    z-index: -1;
+    -webkit-box-shadow: 7px 7px 5px -6px rgba(0,0,0,0.56);
+    -moz-box-shadow: 7px 7px 5px -6px rgba(0,0,0,0.56);
+    box-shadow: 7px 7px 5px -6px rgba(0,0,0,0.56);
+    transition: .3s all ease-in-out;
+}
+
+.contact-link:hover i {
+    color: #c31432;
+}
+
+.contact-link:hover:after {
+    background: white;
+}

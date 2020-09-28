@@ -1,0 +1,165 @@
+
+
+.blur-content {
+    filter: blur(5px);
+    animation: blur-background .5s;
+}
+
+@keyframes blur-background {
+    from { filter: blur(0px)}
+    to { filter: blur(5px) }
+}
+
+.hide-content {
+    display: none !important;
+}
+
+#lightbox {
+    position: fixed;
+    height: 100%;
+    width: 100vw;
+    z-index: 7;
+    color: white;
+    display: none;
+}
+
+#lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.lightbox-close {
+    font-size: 3em;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.lightbox-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10%;
+    padding: 10%;
+    height: 65vh;
+}
+
+#lightbox-gallery, .lightbox-content, .lightbox-actions {
+    z-index: 2;
+}
+
+#lightbox-gallery {
+    background: black;
+    background-image: url("../static/images/project/petstash-mobile2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.lightbox-divider {
+    height: 2px;
+    width: 100%;
+    background-color: #ccc;
+}
+
+.lightbox-content {
+    overflow-y: scroll;
+}
+
+#lightbox-title {
+    margin: 0;
+    padding: 0;
+}
+
+#lightbox-text {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.lightbox-inprogress {
+    color: #fad201;
+    padding-bottom: 7px;
+    padding-top: 5px;
+}
+
+.lightbox-inprogress i {
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+
+#lightbox-skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+#lightbox-actions {
+    margin-bottom: 35px;
+}
+
+
+
+@media only screen and (max-width: 1050px) {
+
+/* Mobile styles */
+
+    #lightbox {
+        height: 100vh;
+    }
+
+    .lightbox-close {
+        font-size: 1.9em;
+        top: 20px;
+        right: 20px;
+    }
+
+    .lightbox-container {
+        height: calc(100vh - 95px);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.3fr 2fr;
+        grid-gap: 10px;
+        padding: 0;
+        padding-top: 70px;
+        margin-left: 10px;
+        margin-right: 15px;
+    }
+
+    #lightbox-title {
+        font-size: 1.3em;
+        position: fixed;
+        top: 25px;
+        left: 15px;
+    }
+
+    .lightbox-divider {
+        position: fixed;
+        left: 0;
+    }
+
+
+}
+
+@media only screen and (max-width: 640px) {
+    
+    /* #lightbox-skills-wrapper {
+        grid-template-columns: repeat(auto-fill, 65px);
+        grid-gap: 3px;
+        font-size: 13px;
+    } */
+
+    #lightbox-text {
+        font-size: .9em;
+    }
+
+
+    #lightbox-actions {
+        display: flex;
+        justify-content: space-around;
+    }
+}
