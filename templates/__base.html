@@ -40,10 +40,13 @@
             #home {
                 background-image: url('{% static "img/background/landing-mobile.jpg" %}');
             }
+        }
     </style>
 </head>
 <body>
     {% block content %}
     {% endblock content %}
+    {% include "__navbar.html" %}
+    {% include "__footer.html" %}
 </body>
 </html>
